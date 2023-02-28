@@ -21,6 +21,10 @@ public class StepDefinitions extends BaseTest {
 	public void check_able_to_read_cred_from_github() {
 		System.out.println("AAAAAAAAA");
 		Reporting.logReporter(Status.INFO, "AAAAAAAAAAAAAAAAAA");
+		
+		String str = "${secrets.CHECKVAR}";
+		
+		Reporting.logReporter(Status.INFO, str);
 	}
 
 }
