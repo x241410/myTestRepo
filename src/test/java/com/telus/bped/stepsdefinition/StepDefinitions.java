@@ -1,12 +1,14 @@
 package com.telus.bped.stepsdefinition;
 
+import com.test.reporting.Reporting;
 import com.test.ui.actions.BaseTest;
+import com.test.utils.Status;
 
 import io.cucumber.java.en.Given;
 
 /**
  * ***************************************************************************
- * DESCRIPTION: This class contains the steps implementations for the BPED
+ * DESCRIPTION: This class contains the steps implementations for the Test
  * application smoke tests AUTHOR: x241410
  * ***************************************************************************
  */
