@@ -22,7 +22,8 @@ public class StepDefinitions extends BaseTest {
 		System.out.println("AAAAAAAAA");
 		Reporting.logReporter(Status.INFO, "AAAAAAAAAAAAAAAAAA");
 		
-		String str = "${secrets.CHECKVAR}";
+		String str = SystemProperties.getStringValue("myVar");
+
 		
 		Reporting.logReporter(Status.INFO, str);
 	}
