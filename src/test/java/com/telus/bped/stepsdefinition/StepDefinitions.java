@@ -23,12 +23,17 @@ public class StepDefinitions extends BaseTest {
 		Reporting.logReporter(Status.INFO, "SYS Key: SystemProperties.getStringValue(\"myVar\")" + a);
 		
 		
-		String str = System.getenv("GH_TEST");
-		Reporting.logReporter(Status.INFO, "GH Key:System.getenv(\"GH_TEST\")  " + str);
+		String str = System.getenv("GITHUB_SECRET_GH_TEST");
+		Reporting.logReporter(Status.INFO, "===================================================");
+		Reporting.logReporter(Status.INFO, "GH Key:System.getenv GITHUB_SECRET_GH_TEST  :" + str);
+		Reporting.logReporter(Status.INFO, "===================================================");
 		
-		String str2 = "${{GH_TEST}}";
-		Reporting.logReporter(Status.INFO, "GH Key:System.getenv(\"\"${{GH_TEST}}\"\")  " + str2);
-
+		
+		String str2 = System.getenv("GH_TEST");
+		Reporting.logReporter(Status.INFO, "===================================================");
+		Reporting.logReporter(Status.INFO, "GH Key:System.getenv GH_TEST  :" + str2);
+		Reporting.logReporter(Status.INFO, "===================================================");
+		
 	}
 
 }
