@@ -1,0 +1,12 @@
+name: Test Actions
+on: push
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run a one-line script
+      run:  echo ${{ secrets.GH_TEST }}
+    - name: Build with Maven
+      env: # lookup key as an environment variable
+        GH_TEST: ${{ secrets.GH_TEST }}
