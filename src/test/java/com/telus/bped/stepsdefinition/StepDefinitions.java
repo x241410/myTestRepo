@@ -16,16 +16,19 @@ import io.cucumber.java.en.Given;
 
 public class StepDefinitions extends BaseTest {
 
-	
-	
 	@Given("check able to read cred from github")
 	public void check_able_to_read_cred_from_github() {
-		
+
 		String a = SystemProperties.getStringValue("myVar");
-		Reporting.logReporter(Status.INFO, "SYS Key: "+ a);
-		String str = System.getenv("GH_TEST");
-		Reporting.logReporter(Status.INFO, "GH Key: "+ str);
+		Reporting.logReporter(Status.INFO, "SYS Key: SystemProperties.getStringValue(\"myVar\")" + a);
 		
+		
+		String str = System.getenv("GH_TEST");
+		Reporting.logReporter(Status.INFO, "GH Key:System.getenv(\"GH_TEST\")  " + str);
+		
+		String str2 = "${{GH_TEST}}";
+		Reporting.logReporter(Status.INFO, "GH Key:System.getenv(\"\"${{GH_TEST}}\"\")  " + str2);
+
 	}
 
 }
