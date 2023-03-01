@@ -17,3 +17,4 @@ jobs:
           echo ${{ secrets.GH_TEST }}
           echo "Trick to echo GitHub Actions Secret:  "
           echo ${{secrets.GH_TEST}}
+          echo ${{secrets.GITHUB_SECRET_GH_TEST}}
