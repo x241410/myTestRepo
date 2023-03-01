@@ -23,8 +23,8 @@ public class StepDefinitions extends BaseTest {
 		System.out.println("AAAAAAAAA");
 		Reporting.logReporter(Status.INFO, "AAAAAAAAAAAAAAAAAA");
 		
-		String str = SystemProperties.getStringValue("myVar");
-		
+		String a = SystemProperties.getStringValue("myVar");
+		String str = System.getenv("myVar");
 		Reporting.logReporter(Status.INFO, str);
 		
 	}
