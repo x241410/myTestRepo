@@ -1,3 +1,0 @@
-name: Uploading to Bintray
-   env:
-     s1: ${{ secrets.GH_TEST }}
