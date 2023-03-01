@@ -22,8 +22,9 @@ public class StepDefinitions extends BaseTest {
 	public void check_able_to_read_cred_from_github() {
 		
 		String a = SystemProperties.getStringValue("myVar");
-		String str = System.getenv("myVar");
-		Reporting.logReporter(Status.INFO, str);
+		Reporting.logReporter(Status.INFO, "SYS Key: "+ a);
+		String str = System.getenv("GH_TEST");
+		Reporting.logReporter(Status.INFO, "GH Key: "+ str);
 		
 	}
 
