@@ -20,8 +20,6 @@ public class StepDefinitions extends BaseTest {
 	
 	@Given("check able to read cred from github")
 	public void check_able_to_read_cred_from_github() {
-		System.out.println("AAAAAAAAA");
-		Reporting.logReporter(Status.INFO, "AAAAAAAAAAAAAAAAAA");
 		
 		String a = SystemProperties.getStringValue("myVar");
 		String str = System.getenv("myVar");
