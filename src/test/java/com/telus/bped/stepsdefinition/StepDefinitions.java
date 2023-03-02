@@ -40,10 +40,15 @@ public class StepDefinitions extends BaseTest {
 		System.out.println("GH TEST:" + str2);
 		System.out.println("===================================================");
 		
+		
+		
+		if(str2==null) {
+			System.out.println("GH String is NULL");
+		}
+
 		if (str2.contains("demo")) {
 			System.out.println("********Condition Check Passed");
 		}
-
 	}
 
 	
