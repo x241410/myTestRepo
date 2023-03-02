@@ -106,7 +106,32 @@
 		</resources>
 	</build>
 	<dependencies>
+		<dependency>
+			<groupId>telus.bt.automation</groupId>
+			<!-- <artifactId>telus-test-selenium-ui-core</artifactId> -->
+			<artifactId>telus-test-selenium-ui-core</artifactId>
+			<version>6.0-SNAPSHOT</version>
+		</dependency>
 		
+		<dependency>
+			<groupId>telus.bt.automation</groupId>
+			<artifactId>telus-api-test-core</artifactId>
+			<version>${karate.core.version}</version>
+			<exclusions>
+				<exclusion> <!-- declare the exclusion here -->
+					<groupId>com.epam.reportportal</groupId>
+					<artifactId>client-java</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.epam.reportportal</groupId>
+					<artifactId>commons-model</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.aventstack</groupId>
+					<artifactId>extentreports</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
 	</dependencies>
 
 </project>
